@@ -324,6 +324,22 @@ NOTE: Similar syntax is followed for state level too. The only exception is, it 
                 },
                 "responseTimestamp": 1630346630074 //Ignore. For internal use only.
             }
+            
+ ## Github Cloning
+
+'''
+import git
+
+def git_clone():
+    return  git.Repo.clone_from("https://github.com/PhonePe/pulse.git", "PhonePe_Pulse")
+
+if __name__ == "__main__":
+    
+    git_clone()
+'''
+    
+
+
 
 
 ## Inspired From:
