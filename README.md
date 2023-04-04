@@ -47,31 +47,31 @@ Similar to country level data, state level data too grouped into each year. All 
 
 Example: 2021 > 1.json represents data for quarter 1 (Jan, Feb and Mar 2021)
 
-data
-|___ aggregated
-    |___ transactions
-        |___ country
-            |___ india
-                |___ 2018
-                |    1.json
-                |    2.json
-                |    3.json
-                |    4.json
-                
-                |___ 2019
-                |    ...
-                |___ 2019
-                |___ state 
-                    |___ andaman-&-nicobar-islands
-                        |___2018
-                        |   1.json
-                        |   2.json
-                        |   3.json
-                        |   4.json
+            data
+            |___ aggregated
+                |___ transactions
+                    |___ country
+                        |___ india
+                            |___ 2018
+                            |    1.json
+                            |    2.json
+                            |    3.json
+                            |    4.json
 
-                    |___ andhra-pradesh
-                    |    ...
-                    |    ...
+                            |___ 2019
+                            |    ...
+                            |___ 2019
+                            |___ state 
+                                |___ andaman-&-nicobar-islands
+                                    |___2018
+                                    |   1.json
+                                    |   2.json
+                                    |   3.json
+                                    |   4.json
+
+                                |___ andhra-pradesh
+                                |    ...
+                                |    ...
 
 ## Inspired From:
 
