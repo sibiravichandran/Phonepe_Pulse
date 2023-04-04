@@ -350,14 +350,6 @@ In summary, this script uses the "git" module to clone a Git repository from a s
     
 
 
-
-
-## Inspired From:
-
-Data set link: https://github.com/PhonePe/pulse#readme
-
-Inspired from: https://www.phonepe.com/pulse/explore/transaction/2022/4/
-
 ## Data Process
 
 The code defines a function that aggregates data from multiple JSON files and returns the data as a Pandas DataFrame. 
@@ -428,3 +420,68 @@ The function returns the df_st_agg_transactions DataFrame.
 Finally, the function also contains some commented-out code (#df_st_agg_transactions.to_csv('StateWise_Aggregated_Transactions.csv')) that would save the aggregated transaction data to a CSV file if uncommented.
 
 In summary, the st_agg_transactions function aggregates transaction data from multiple JSON files into a Pandas DataFrame, making it easier to analyze and manipulate the data.
+
+## Cleaning Data
+The below code defines a function called clean_state_names that takes a Pandas DataFrame df as input. The function replaces the abbreviated state names or misspelled state names in the State column of the input DataFrame df with their correct and full names using a predefined dictionary. The corrected DataFrame is then returned.
+
+            def clean_state_names(df):
+
+                states={'andaman-&-nicobar-islands':'Andaman & Nicobar',
+                        'andaman & nicobar islands':'Andaman & Nicobar',
+                         'andhra-pradesh': 'Andhra Pradesh',
+                         'andhra pradesh': 'Andhra Pradesh',
+                         'arunachal-p':'Arunanchal Pradesh',
+                         'arunachal-pradesh':'Arunanchal Pradesh',
+                         'arunachal pradesh':'Arunanchal Pradesh',
+                         'assam': 'Assam',
+                         'bihar': 'Bihar',
+                         'chandigarh': 'Chandigarh',
+                         'chhattisgarh': 'Chhattisgarh',
+                         'dadra-&-nagar-haveli-&-dama':'Dadara & Nagar Havelli & Daman & Diu',
+                         'dadra-&-nagar-haveli-&-daman-&-diu':'Dadara & Nagar Havelli & Daman & Diu',
+                         'dadra & nagar haveli & daman & diu' : 'Dadara & Nagar Havelli & Daman & Diu',
+                         'delhi': 'NCT of Delhi',
+                         'goa': 'Goa',
+                         'gujarat': 'Gujarat',
+                         'haryana': 'Haryana',
+                         'himachal-pradesh': 'Himachal Pradesh',
+                         'himachal pradesh': 'Himachal Pradesh',
+                         'jammu-&-kashmir': 'Jammu & Kashmir',
+                         'jammu & kashmir': 'Jammu & Kashmir',
+                         'jharkhand': 'Jharkhand',
+                         'karnataka': 'Karnataka',
+                         'kerala': 'Kerala',
+                         'ladakh': 'Ladakh',
+                         'lakshadweep':'Lakshadweep',
+                         'madhya-pradesh': 'Madhya Pradesh',
+                         'madhya pradesh':'Madhya Pradesh',
+                         'maharashtra': 'Maharashtra',
+                         'manipur': 'Manipur',
+                         'meghalaya': 'Meghalaya',
+                         'mizoram':'Mizoram',
+                         'nagaland': 'Nagaland',
+                         'puducherry': 'Puducherry',
+                         'punjab': 'Punjab',
+                         'rajasthan': 'Rajasthan',
+                         'sikkim': 'Sikkim',
+                         'tamil-nadu': 'Tamil Nadu',
+                         'tamil nadu':'Tamil Nadu',
+                         'telangana': 'Telangana',
+                         'tripura': 'Tripura',
+                         'uttar-pradesh': 'Uttar Pradesh',
+                         'uttar pradesh':'Uttar Pradesh',
+                         'uttarakhand': 'Uttarakhand',
+                         'west-bengal': 'WestBengal',
+                         'west bengal': 'WestBengal',
+                         'odisha':'Odisha',
+                         }
+
+                df['State'] = df['State'].replace(states)
+                return df
+
+
+## Inspired From:
+
+Data set link: https://github.com/PhonePe/pulse#readme
+
+Inspired from: https://www.phonepe.com/pulse/explore/transaction/2022/4/
