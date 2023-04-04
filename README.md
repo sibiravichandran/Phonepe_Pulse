@@ -1,4 +1,5 @@
-![insurance_thumbnail](https://user-images.githubusercontent.com/102207260/229822431-5a1171e5-302a-41ef-8203-e6cb18d0c7a4.png)
+![Phonepe_logo](https://user-images.githubusercontent.com/102207260/229822827-8320e886-c7b4-4246-b8be-e66351a2b016.png)
+
 # Phonepe_Pulse
 Phonepe Pulse Data Visualization
 ![PhonePe](https://user-images.githubusercontent.com/102207260/229822254-d6c2fa88-6ba8-4980-979b-dfcd66009354.jpg)
