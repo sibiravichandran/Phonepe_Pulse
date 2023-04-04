@@ -478,6 +478,55 @@ The below code defines a function called clean_state_names that takes a Pandas D
 
                 df['State'] = df['State'].replace(states)
                 return df
+                
+                
+## Table Creation
+
+### create_database_tables 
+    
+                connection = mysql.connector.connect(
+                host='localhost',
+                user='root',
+                password = "12345678",
+                database = "Phonepe_Database"
+                )
+
+                #cursor = connection.cursor()
+
+                #my_cursor.execute("CREATE DATABASE Phonepe_Database")
+
+                print('Conn is established')
+
+                engine = create_engine('mysql+mysqlconnector://root:12345678@localhost:3306/Phonepe_Database', echo=False)
+
+                # Write DataFrames to MySQL tables using SQLAlchemy engine
+                tables_to_create = {
+
+                    'Statewise_Agg_Transactions': df_st_aggregated_transactions,
+                    'Statewise_Agg_Users': df_st_aggregated_users,
+                    'Statewise_Map_Transactions': df_st_map_transaction,
+                    'Statewise_Map_Users': df_st_map_user,
+                    'State_DistrictWise_Top_Transactions': df_st_dt_top_transactions,
+                    'State_PincodeWise_Top_Transactions': df_st_pin_top_transactions,
+                    'State_DistrictWise_Top_Users': df_st_dt_top_users,
+                    'State_PincodeWise_Top_Users': df_st_pin_top_users
+
+                }
+
+                for table_name, df in tables_to_create.items():
+                    df.to_sql(table_name, con=engine, if_exists='replace', index=False)
+
+                    print('Tables created successfully.')
+
+                connection.commit()
+
+                connection.close()
+
+The code establishes a connection to a MySQL database on a local machine, and then creates several tables in that database based on DataFrames. The connection details are specified in the connection object, which includes the host name, user name, password, and database name.
+
+The code uses the create_engine method from the SQLAlchemy library to create an engine object that can connect to the database using the same connection details. It then iterates through a dictionary of table names and DataFrames, and uses the to_sql method of each DataFrame to write the data to the corresponding table in the database. The if_exists parameter is set to 'replace', which means that if the table already exists, it will be dropped and recreated with the new data.
+
+Finally, the code commits the changes to the database and closes the connection.
 
 
 ## Inspired From:
