@@ -1,6 +1,3 @@
-
-![Phonepe_logo](https://user-images.githubusercontent.com/102207260/229822958-6afc36dd-9b0a-48d2-9797-9712bb39fa74.png)
-
 # Phonepe_Pulse
 Phonepe Pulse Data Visualization
 ![PhonePe](https://user-images.githubusercontent.com/102207260/229822254-d6c2fa88-6ba8-4980-979b-dfcd66009354.jpg)
