@@ -540,6 +540,16 @@ Choropleth maps are used for geo visualization of data
 Example:
 ![newplot](https://user-images.githubusercontent.com/102207260/229823634-754f846c-2689-4fc9-9694-b178bd850171.png)
 
+Some of the Visualizations used for this project:
+
+![newplot (2)](https://user-images.githubusercontent.com/102207260/229824952-59d21224-b77d-4d45-849b-dc3cbbd9a3a7.png)
+![newplot (1)](https://user-images.githubusercontent.com/102207260/229824964-b278a804-b7b2-4459-ba27-7ce47fe2a15b.png)
+![newplot (7)](https://user-images.githubusercontent.com/102207260/229824969-b74592d7-9642-4870-a713-2d7dc4d2d6c7.png)
+![newplot (6)](https://user-images.githubusercontent.com/102207260/229824972-381581de-f7dc-4c3b-9eba-7eb1271d2e8f.png)
+![newplot (5)](https://user-images.githubusercontent.com/102207260/229824975-3aee4d42-cf73-4bbe-888f-975ece454c32.png)
+![newplot (4)](https://user-images.githubusercontent.com/102207260/229824979-16b576a6-6dbb-48e0-a34b-7e143b76fb0b.png)
+![newplot (3)](https://user-images.githubusercontent.com/102207260/229824982-4f606c51-024f-4c7c-80e8-ac150f76f45b.png)
+
 
 ## Inspired From:
 
