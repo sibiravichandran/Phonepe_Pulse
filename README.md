@@ -358,3 +358,73 @@ Data set link: https://github.com/PhonePe/pulse#readme
 
 Inspired from: https://www.phonepe.com/pulse/explore/transaction/2022/4/
 
+## Data Process
+
+The code defines a function that aggregates data from multiple JSON files and returns the data as a Pandas DataFrame. 
+
+
+### Example:
+
+                def st_agg_transactions(route_path):
+
+                        path = Path(route_path)
+                        col1_names = ['State', 'Year', 'Quarter', 'Payments','Transaction_type', 'Transaction_count', 'Transaction_amount']
+                        col1_values = []
+
+                        for state_path in path.iterdir():
+                            if state_path.is_dir():
+                                state = state_path.name
+                                for year_path in state_path.iterdir():
+                                    if year_path.is_dir():
+                                        year = year_path.name
+                                        for quarter_path in year_path.iterdir():
+                                            if quarter_path.is_file() and quarter_path.suffix == '.json':
+                                                quarter = int(quarter_path.stem)
+                                                with open(quarter_path, 'r') as f:
+                                                    data = json.load(f)
+                                                    try:
+                                                        for transaction in data['data']['transactionData']:
+                                                            name = transaction['name']
+                                                            type_of_transac =  transaction['paymentInstruments'][0]['type']
+                                                            count = transaction['paymentInstruments'][0]['count']
+                                                            amount = transaction['paymentInstruments'][0]['amount']
+                                                            col1_values.append([state, year, quarter, name,type_of_transac, count, amount])
+                                                    except Exception as e :
+                                                        print(e)
+
+                        df_st_agg_transactions = pd.DataFrame(col1_values, columns=col1_names)
+
+                        df_st_agg_transactions.head()
+
+                        df_st_agg_transactions.isnull().sum()
+
+                        #df_st_agg_transactions.to_csv('StateWise_Aggregated_Transactions.csv')
+
+                        return df_st_agg_transactions
+
+
+
+The code above defines a function named st_agg_transactions that aggregates transaction data from multiple JSON files and returns the aggregated data as a Pandas DataFrame. 
+Here's what each part of the code does:
+
+The function takes one argument, route_path, which specifies the path to the directory containing the transaction data files.
+
+The Path() function from the pathlib module is used to create a Path object representing the specified directory.
+
+A list of column names (col1_names) is defined for the DataFrame that will hold the aggregated transaction data.
+
+An empty list (col1_values) is defined to hold the transaction data itself.
+
+The function iterates over the directories and files in the specified directory using a series of nested for loops. For each directory and file, the function extracts the state, year, and quarter information from the directory and file names, and uses the json module to load the transaction data from the JSON file.
+
+The function then iterates over the transaction data and extracts the name, type, count, and amount information for each transaction.
+
+The extracted transaction data is appended to the col1_values list.
+
+Once all the transaction data has been extracted and appended, the col1_values list is used to create a new Pandas DataFrame (df_st_agg_transactions) with the specified column names (col1_names).
+
+The function returns the df_st_agg_transactions DataFrame.
+
+Finally, the function also contains some commented-out code (#df_st_agg_transactions.to_csv('StateWise_Aggregated_Transactions.csv')) that would save the aggregated transaction data to a CSV file if uncommented.
+
+In summary, the st_agg_transactions function aggregates transaction data from multiple JSON files into a Pandas DataFrame, making it easier to analyze and manipulate the data.
