@@ -1,4 +1,5 @@
-![Phonepe_logo](https://user-images.githubusercontent.com/102207260/229822827-8320e886-c7b4-4246-b8be-e66351a2b016.png)
+
+![Phonepe_logo](https://user-images.githubusercontent.com/102207260/229822958-6afc36dd-9b0a-48d2-9797-9712bb39fa74.png)
 
 # Phonepe_Pulse
 Phonepe Pulse Data Visualization
