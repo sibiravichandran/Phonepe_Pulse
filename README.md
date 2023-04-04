@@ -327,16 +327,26 @@ NOTE: Similar syntax is followed for state level too. The only exception is, it 
             
  ## Github Cloning
 
-'''
-import git
 
-def git_clone():
-    return  git.Repo.clone_from("https://github.com/PhonePe/pulse.git", "PhonePe_Pulse")
+                import git
 
-if __name__ == "__main__":
-    
-    git_clone()
-'''
+                def git_clone():
+                    return  git.Repo.clone_from("https://github.com/PhonePe/pulse.git", "PhonePe_Pulse")
+
+                if __name__ == "__main__":
+
+                    git_clone()
+
+
+The code above is a Python script that uses the "git" module to clone a Git repository from the specified URL (https://github.com/PhonePe/pulse.git) into a local directory named "PhonePe_Pulse". Here's a breakdown of what each part of the code does:
+
+The line "import git" imports the "git" module, which provides a Python interface for working with Git repositories.
+
+The "git_clone()" function is defined, which uses the "Repo.clone_from()" method provided by the "git" module to clone the Git repository from the specified URL into the local directory specified as the second argument ("PhonePe_Pulse").
+
+The "if name == "main":" block is a conditional statement that ensures that the "git_clone()" function is only called if the script is being run directly as the main program (i.e., not being imported as a module by another script). When the script is run, the "git_clone()" function is called, which clones the specified Git repository into the local directory.
+
+In summary, this script uses the "git" module to clone a Git repository from a specified URL into a local directory, which can be used for further development or analysis.
     
 
 
