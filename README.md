@@ -537,6 +537,9 @@ Finally, the code commits the changes to the database and closes the connection.
 To make the data visualize according to the manipulation over the data libraries like matplotlib, plotly,seaborn are used.
 
 Choropleth maps are used for geo visualization of data
+Example:
+![newplot](https://user-images.githubusercontent.com/102207260/229823634-754f846c-2689-4fc9-9694-b178bd850171.png)
+
 
 ## Inspired From:
 
