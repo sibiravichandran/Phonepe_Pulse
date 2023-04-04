@@ -202,6 +202,128 @@ NOTE: Similar syntax is followed for district level too. Ex: data/map/transactio
                 "responseTimestamp": 1630346628834 //Ignore. For internal use only.
             }
 
+2.2 data/map/user/hover/country/india/2021/1.json
+Total number of registered users and number of app opens by these registered users at the state level.
+
+For complete details on syntax find the comments in below code
+
+NOTE: Similar syntax is followed for district level too. Ex: data/map/user/hover/country/india/state/delhi/2021/1.json
+
+            {
+                "success": true, //Ignore. For internal use only.
+                "code": "SUCCESS", //Ignore. For internal use only.
+                "data": {
+                    "hoverData": { //Internally, this being used to show state/district level data whenever a user hovers on a particular state/district.
+                        "puducherry": {
+                            "registeredUsers": 346279, //Total number of registered users for the selected state/district
+                            "appOpens": 7914507 //Total number of app opens by the registered users for the selected state/district
+                        },
+
+                        ...,
+
+                        ...,
+
+                        "tamil nadu": {
+                            "registeredUsers": 16632608,
+                            "appOpens": 348801714
+                        }
+                    }
+                },
+                "responseTimestamp": 1630346628866 //Ignore. For internal use only.
+            }
+
+
+### 3. Top
+3.1 data/top/transaction/country/india/2021/1.json
+Top 10 states / districts / pin codes where the most number of the transactions happened for a selected year-quarter combination.
+
+For complete details on syntax find the comments in below code
+
+NOTE: Similar syntax is followed for state level too. The only exception is, it won't have data for states. Ex: data/top/transaction/country/india/state/delhi/2021/1.json
+
+            {
+                "success": true, //Ignore. For internal use only.
+                "code": "SUCCESS", //Ignore. For internal use only.
+                "data": {
+                    "states": [ //List of states where most number of transactions happened along with total value for a selected year-quarter combination.
+                        {
+                            "entityName": "karnataka", // State name
+                            "metric": {
+                                "type": "TOTAL",
+                                "count": 523797492, //Total number of transactions
+                                "amount": 7.549953574123948E11 //Total value of all transactions
+                            }
+                        },
+
+                        ...,
+                    ],
+                    "districts": [ //List of districts where most number of transactions happened along with total value for a selected year-quarter combination.
+                        {
+                            "entityName": "bengaluru urban", //District name
+                            "metric": {
+                                "type": "TOTAL",
+                                "count": 348712787, //Total number of transactions
+                                "amount": 4.324013412317671E11 //Total value of all transactions
+                            }
+                        },
+
+                        ...,
+                    ],
+                    "pincodes": [ //List of pin codes where most number of transactions happened along with total value for a selected year-quarter combination.
+                        {
+                            "entityName": "560001", //Pin code
+                            "metric": {
+                                "type": "TOTAL",
+                                "count": 111898471, //Total number of transactions
+                                "amount": 1.5427512629157785E11 //Total value of all transactions
+                            }
+                        },
+
+                        ...,
+                    ]
+                },
+                "responseTimestamp": 1630346629360 //Ignore. For internal use only.
+            }
+            
+            
+ 3.2 data/top/user/country/india/2021/1.json
+Top 10 states / districts / pin codes where most number of users registered from, for a selected year-quarter combination.
+
+For complete details on syntax find the comments in below code
+
+NOTE: Similar syntax is followed for state level too. The only exception is, it won't have data for states. Ex: data/top/user/country/india/state/delhi/2021/1.json
+
+            {
+                "success": true, //Ignore. For internal use only.
+                "code": "SUCCESS", //Ignore. For internal use only.
+                "data": {
+                    "states": [ //List of states where the most number of users registered from, for a selected year-quarter combination.
+                        {
+                            "name": "maharashtra", //State name
+                            "registeredUsers": 37077537 //Number of registered users
+                        },
+
+                        ...,
+                    ],
+                    "districts": [ //List of districts where the most number of users registered from, for a selected year-quarter combination.
+                        {
+                            "name": "bengaluru urban", //State name
+                            "registeredUsers": 9955387 //Number of registered users
+                        },
+
+                        ...,
+                    ],
+                    "pincodes": [ //List of pin codes where most number of users registered from, for a selected year-quarter combination.
+                        {
+                            "name": "201301", //Pin code
+                            "registeredUsers": 541127 //Number of registered users
+                        },
+
+                        ...,
+                    ]
+                },
+                "responseTimestamp": 1630346630074 //Ignore. For internal use only.
+            }
 
 
 ## Inspired From:
