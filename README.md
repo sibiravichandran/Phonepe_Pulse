@@ -47,7 +47,7 @@ Similar to country level data, state level data too grouped into each year. All 
 
 Example: 2021 > 1.json represents data for quarter 1 (Jan, Feb and Mar 2021)
 
-        data
+data
 |___ aggregated
     |___ transactions
         |___ country
