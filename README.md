@@ -13,7 +13,7 @@ The solution includes the following steps:
 5. Fetched the data from the MySQL database to display in the dashboard.
 6. Provided at least 10 different dropdown options for users to select different facts and figures to display on the dashboard.
 
-Approach:
+## Approach
 
 1. Data extraction
 2. Data transformation
@@ -22,7 +22,19 @@ Approach:
 5. Data retrieval
 6. Deployment
 
-Inspired From:
+
+## Guide
+This data has been structured to provide details of following two sections with data cuts on Transactions and Users of PhonePe Pulse Folder that has been cloned using the PhonepePulse git repository's data folder
+
+### Aggregated 
+    Aggregated values of various payment categories as shown under Categories section
+### Map 
+    Total values at the State and District levels.
+### Top 
+    Totals of top States / Districts /Pin Codes
+All the data provided in these folders is of JSON format.
+
+## Inspired From:
 
 Data set link: https://github.com/PhonePe/pulse#readme
 
