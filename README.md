@@ -1,5 +1,6 @@
 # Phonepe_Pulse
 Phonepe Pulse Data Visualization
+![PhonePe](https://user-images.githubusercontent.com/102207260/229822254-d6c2fa88-6ba8-4980-979b-dfcd66009354.jpg)
 
 
 The Phonepe pulse Github repository contains a large amount of data related to various metrics and statistics. The goal is to extract this data and process it to obtain insights and information that can be visualized in a user-friendly manner.
@@ -528,6 +529,11 @@ The code uses the create_engine method from the SQLAlchemy library to create an 
 
 Finally, the code commits the changes to the database and closes the connection.
 
+## Data Visualization
+
+To make the data visualize according to the manipulation over the data libraries like matplotlib, plotly,seaborn are used.
+
+Choropleth maps are used for geo visualization of data
 
 ## Inspired From:
 
