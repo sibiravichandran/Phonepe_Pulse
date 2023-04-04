@@ -545,7 +545,7 @@ Some of the Visualizations used for this project:
 ![newplot (6)](https://user-images.githubusercontent.com/102207260/229824972-381581de-f7dc-4c3b-9eba-7eb1271d2e8f.png)
 ![newplot (5)](https://user-images.githubusercontent.com/102207260/229824975-3aee4d42-cf73-4bbe-888f-975ece454c32.png)
 ![newplot (4)](https://user-images.githubusercontent.com/102207260/229824979-16b576a6-6dbb-48e0-a34b-7e143b76fb0b.png)
-![newplot (3)](https://user-images.githubusercontent.com/102207260/229824982-4f606c51-024f-4c7c-80e8-ac150f76f45b.png)
+
 
 
 ## Inspired From:
